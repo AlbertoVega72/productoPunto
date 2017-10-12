@@ -34,8 +34,8 @@ public class servletPP extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int valI1 = Integer.parseInt(request.getParameter("numI1"));
-        int valJ1 = Integer.parseInt(request.getParameter("numJ2"));
-        int valI2 = Integer.parseInt(request.getParameter("numI1"));
+        int valJ1 = Integer.parseInt(request.getParameter("numJ1"));
+        int valI2 = Integer.parseInt(request.getParameter("numI2"));
         int valJ2 = Integer.parseInt(request.getParameter("numJ2"));
         
         float valorT = calcula(valI1, valJ1, valI2, valJ2);
@@ -45,6 +45,7 @@ public class servletPP extends HttpServlet {
         out.println("<html>");
         out.println("<head><title>Producto Punto</title></head>");
         out.println("<body>");
+        out.println("<h1><center>("+valI1+")*("+valI2+")+ ("+valJ1+")*("+valJ2+")</center></h1>");
         out.println("<h1><center>Resultado = "+valorT +"</center></h1>");
         out.println("</body></html>");
         out.close();
